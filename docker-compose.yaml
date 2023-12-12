@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  service-salestracker-user:
+    container_name: service-salestracker-user
+    build:
+      context: ./service-salestracker-user
+      dockerfile: Dockerfile
+    ports:
+      - "82:80"  # Mapuj port 80 z kontenera na port 82 hosta
+    volumes:
+      - ./service-salestracker-user/src:/var/www/html
+    depends_on:
+      - service-salestracker-user-db
+
+  service-salestracker-user-db:
+    container_name: service-salestracker-user-db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: service_salestracker_user
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      
+  phpmyadmin-user:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin-salestracker-user
+    ports:
+      - "8082:80"
+    environment:
+      PMA_HOST: service-salestracker-user-db
+     
