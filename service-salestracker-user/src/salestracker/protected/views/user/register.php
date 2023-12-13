@@ -5,11 +5,14 @@ $this->breadcrumbs = ['Register',];
 ?>
 
 <div id="content">
-<h1>Register</h1>
-
+    <h1>Register</h1>
     <?php if(Yii::app()->user->hasFlash('register')): ?>
         <div class="flash-success">
             <?php echo Yii::app()->user->getFlash('register'); ?>
+        </div>
+    <?php elseif(Yii::app()->user->hasFlash('errors')): ?>
+        <div class="flash-error">
+            <?php echo Yii::app()->user->getFlash('errors'); ?>
         </div>
     <?php else: ?>
         <div class="form">

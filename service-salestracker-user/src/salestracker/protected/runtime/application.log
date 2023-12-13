@@ -905,3 +905,120 @@ in /var/www/html/salestracker/index.php (13)
 2023/12/12 15:43:40 [warning] [application] Failed to set unsafe attribute "size" of "UploadXLSFrom".
 in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (15)
 in /var/www/html/salestracker/index.php (13)
+2023/12/12 16:10:36 [warning] [application] Failed to set unsafe attribute "name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (15)
+in /var/www/html/salestracker/index.php (13)
+2023/12/12 16:10:36 [warning] [application] Failed to set unsafe attribute "full_path" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (15)
+in /var/www/html/salestracker/index.php (13)
+2023/12/12 16:10:36 [warning] [application] Failed to set unsafe attribute "type" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (15)
+in /var/www/html/salestracker/index.php (13)
+2023/12/12 16:10:36 [warning] [application] Failed to set unsafe attribute "tmp_name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (15)
+in /var/www/html/salestracker/index.php (13)
+2023/12/12 16:10:36 [warning] [application] Failed to set unsafe attribute "error" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (15)
+in /var/www/html/salestracker/index.php (13)
+2023/12/12 16:10:36 [warning] [application] Failed to set unsafe attribute "size" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (15)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:48:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'service_salestracker_user.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in /var/www/html/salestracker/protected/controllers/user/RegisterAction.php (12)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:48:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'service_salestracker_user.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2023/12/13 15:55:37 [warning] [application] Failed to set unsafe attribute "name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:55:37 [warning] [application] Failed to set unsafe attribute "full_path" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:55:37 [warning] [application] Failed to set unsafe attribute "type" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:55:37 [warning] [application] Failed to set unsafe attribute "tmp_name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:55:37 [warning] [application] Failed to set unsafe attribute "error" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:55:37 [warning] [application] Failed to set unsafe attribute "size" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:07 [warning] [application] Failed to set unsafe attribute "name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:07 [warning] [application] Failed to set unsafe attribute "full_path" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:07 [warning] [application] Failed to set unsafe attribute "type" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:07 [warning] [application] Failed to set unsafe attribute "tmp_name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:07 [warning] [application] Failed to set unsafe attribute "error" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:07 [warning] [application] Failed to set unsafe attribute "size" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:25 [warning] [application] Failed to set unsafe attribute "name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:25 [warning] [application] Failed to set unsafe attribute "full_path" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:25 [warning] [application] Failed to set unsafe attribute "type" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:25 [warning] [application] Failed to set unsafe attribute "tmp_name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:25 [warning] [application] Failed to set unsafe attribute "error" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:25 [warning] [application] Failed to set unsafe attribute "size" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:56:26 [error] [php] include(YiiMailer.php): Failed to open stream: No such file or directory (/var/www/html/framework/YiiBase.php:463)
+Stack trace:
+#0 /var/www/html/framework/YiiBase.php(463): include()
+#1 /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php(73): autoload()
+#2 /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php(63): UploadXLSAction->sendEmail()
+#3 /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php(23): UploadXLSAction->saveUsers()
+#4 /var/www/html/framework/web/actions/CAction.php(76): UploadXLSAction->run()
+#5 /var/www/html/framework/web/CController.php(308): UploadXLSAction->runWithParams()
+#6 /var/www/html/framework/web/filters/CFilterChain.php(134): UserController->runAction()
+#7 /var/www/html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/framework/web/filters/CFilterChain.php(131): IsUserLoggedInFilter->filter()
+#9 /var/www/html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/html/framework/web/filters/CFilterChain.php(131): ChangePasswordFilter->filter()
+#11 /var/www/html/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/framework/web/CController.php(265): UserController->runActionWithFilters()
+#13 /var/www/html/framework/web/CWebApplication.php(282): UserController->run()
+#14 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/salestracker/index.php(13): CWebApplication->run()
+REQUEST_URI=/salestracker/index.php?r=user/uploadXLS
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (73)
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (63)
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (23)
+2023/12/13 15:57:06 [warning] [application] Failed to set unsafe attribute "name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:57:06 [warning] [application] Failed to set unsafe attribute "full_path" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:57:06 [warning] [application] Failed to set unsafe attribute "type" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:57:06 [warning] [application] Failed to set unsafe attribute "tmp_name" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:57:06 [warning] [application] Failed to set unsafe attribute "error" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)
+2023/12/13 15:57:06 [warning] [application] Failed to set unsafe attribute "size" of "UploadXLSFrom".
+in /var/www/html/salestracker/protected/controllers/user/UploadXLSAction.php (16)
+in /var/www/html/salestracker/index.php (13)

@@ -1,5 +1,8 @@
 version: '3.8'
 
+volumes:
+  mysql-data:
+    driver: local
 services:
   service-salestracker-user:
     container_name: service-salestracker-user
@@ -22,10 +25,12 @@ services:
       MYSQL_DATABASE: service_salestracker_user
       MYSQL_USER: user
       MYSQL_PASSWORD: password
+    volumes:
+      - mysql-data:/var/lib/mysql      
       
-  phpmyadmin-user:
+  service-salestracker-phpmyadmin-user:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin-salestracker-user
+    container_name: service-salestracker-phpmyadmin-user
     ports:
       - "8082:80"
     environment:

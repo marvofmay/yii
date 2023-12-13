@@ -2,7 +2,6 @@
 
 require '../vendor/autoload.php';
 use PhpOffice\PhpSpreadsheet\IOFactory;
-require './protected/extensions/YiiMailer/YiiMailer.php';
 
 class UploadXLSAction extends CAction
 {
@@ -10,21 +9,21 @@ class UploadXLSAction extends CAction
 
     public function run(): void
     {
-        $model = new UploadXLSFrom;
-        if (! empty($_FILES['UploadXLSFrom'])) {
-            $model->attributes = $_FILES['UploadXLSFrom'];
-            $model->file = CUploadedFile::getInstance($model, 'file');
+        try {
+            $model = new UploadXLSFrom;
+            if (!empty($_FILES['UploadXLSFrom'])) {
+                $model->attributes = $_FILES['UploadXLSFrom'];
+                $model->file = CUploadedFile::getInstance($model, 'file');
 
-            if ($model->validate()) {
-                $spreadsheet = IOFactory::load($_FILES['UploadXLSFrom']['tmp_name']['file']);
-                $this->sheetData = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
-                try {
+                if ($model->validate()) {
+                    $spreadsheet = IOFactory::load($_FILES['UploadXLSFrom']['tmp_name']['file']);
+                    $this->sheetData = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
                     $this->checkIfEmailExistsInDB();
                     $this->saveUsers();
-                } catch (Exception $e) {
-                    Yii::app()->user->setFlash('uploadXLSError', $e->getMessage());
                 }
             }
+        } catch (Exception $exception) {
+            Yii::app()->user->setFlash('uploadXLSError', $exception->getMessage());
         }
 
         $this->getController()->render('uploadXLS', ['model' => $model]);
@@ -68,6 +67,7 @@ class UploadXLSAction extends CAction
 
     private function sendEmail(string $email, string $generatedPassword): void
     {
+        Yii::import('application.extensions.YiiMailer.YiiMailer');
         $from = Yii::app()->params['adminEmail'];
         $mail = new YiiMailer(
             'confirmRegistrationMail',
