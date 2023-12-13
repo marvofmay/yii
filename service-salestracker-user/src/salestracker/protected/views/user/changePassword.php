@@ -4,9 +4,13 @@
 ?>
 
 <div id="content">
-    <?php if(Yii::app()->user->hasFlash('changePassword')): ?>
+    <?php if (Yii::app()->user->hasFlash('changePassword')): ?>
         <div class="flash-success">
             <?php echo Yii::app()->user->getFlash('changePassword'); ?>
+        </div>
+    <?php elseif (Yii::app()->user->hasFlash('errors')): ?>
+        <div class="flash-error">
+            <?php echo Yii::app()->user->getFlash('errors'); ?>
         </div>
     <?php else: ?>
 
