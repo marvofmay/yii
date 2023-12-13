@@ -1,6 +1,7 @@
 <?php
 
 require '../vendor/autoload.php';
+
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class UploadXLSAction extends CAction
@@ -50,38 +51,21 @@ class UploadXLSAction extends CAction
             }
             $email = $row['C'];
             $generatedPassword = substr(md5(mt_rand()), 0, 7);
-            $user = new User();
-            $user->setFirstname($row['A']);
-            $user->setLastname($row['B']);
-            $user->setEmail($email);
-            $user->setBirth($row['D']);
-            $user->setPassword($generatedPassword);
-            $user->setCreated(date('Y-m-d H:i:s'));
-            $user->setDatePassword(date('Y-m-d'));
-            $user->save();
-            $this->sendEmail($email, $generatedPassword);
+            $userService = new UserService(
+                $row['A'],
+                $row['B'],
+                $email,
+                $row['D'],
+                $generatedPassword,
+                date('Y-m-d'),
+                date('Y-m-d H:i:s')
+            );
+
+            if ($userService->setUser()->saveUserInDB()) {
+                $userService->sendEmail();
+            }
         }
 
         Yii::app()->user->setFlash('uploadXLSSuccess', 'Upload XLS with success.');
-    }
-
-    private function sendEmail(string $email, string $generatedPassword): void
-    {
-        Yii::import('application.extensions.YiiMailer.YiiMailer');
-        $from = Yii::app()->params['adminEmail'];
-        $mail = new YiiMailer(
-            'confirmRegistrationMail',
-            array(
-                'login' => $email,
-                'generatedPassword' => $generatedPassword,
-                'description' => 'e-mail confirming registration'
-            )
-        );
-        $mail->setFrom($from, $from);
-        $mail->setSubject('E-mail confirming registration.');
-        $mail->setTo($email);
-        if (! $mail->send()) {
-            throw new Exception(sprintf('Error while sending email: %s', $mail->getError()));
-        }
     }
 }
