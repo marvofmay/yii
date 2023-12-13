@@ -62,7 +62,16 @@ class UploadXLSAction extends CAction
             );
 
             if ($userService->setUser()->saveUserInDB()) {
-                $userService->sendEmail();
+                $emailService = new EmailService(
+                    $email,
+                    'confirmRegistrationMail',
+                    [
+                        'login' => $email,
+                        'generatedPassword' => $generatedPassword,
+                        'description' => 'e-mail confirming registration'
+                    ]
+                );
+                $emailService->sendEmail();
             }
         }
 

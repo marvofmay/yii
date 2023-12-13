@@ -1,9 +1,6 @@
 <?php
-
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
+    $this->pageTitle=Yii::app()->name . ' - Login';
+    $this->breadcrumbs=['Login',];
 ?>
 
 <div id="content">

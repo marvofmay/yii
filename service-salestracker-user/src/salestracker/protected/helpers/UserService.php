@@ -35,26 +35,7 @@ class UserService
         return $this->user->save();
     }
 
-    public function sendEmail(): self
-    {
-        $from = Yii::app()->params['adminEmail'];
-        $mail = new YiiMailer(
-            'confirmRegistrationMail',
-            array(
-                'login' => $this->email,
-                'generatedPassword' => $this->password,
-                'description' => 'e-mail confirming registration'
-            )
-        );
-        $mail->setFrom($from, $from);
-        $mail->setSubject('E-mail confirming registration.');
-        $mail->setTo($this->email);
-        if (! $mail->send()) {
-            throw new Exception(sprintf('Error while sending email: %s', $mail->getError()));
-        }
 
-        return $this;
-    }
 
     public static function checkIfEmailExistsInDB(string $email): bool
     {

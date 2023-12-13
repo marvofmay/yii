@@ -12,6 +12,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
         'application.helpers.UserService',
+        'application.helpers.EmailService',
         'application.extensions.YiiMailer.YiiMailer',
 	),
 
