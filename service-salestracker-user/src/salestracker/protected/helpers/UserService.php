@@ -55,4 +55,9 @@ class UserService
 
         return $this;
     }
+
+    public static function checkIfEmailExistsInDB(string $email): bool
+    {
+        return ! is_null(User::model()->findByAttributes(['email' => $email]));
+    }
 }

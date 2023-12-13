@@ -30,14 +30,14 @@ class UploadXLSAction extends CAction
         $this->getController()->render('uploadXLS', ['model' => $model]);
     }
 
-    private function checkIfEmailExistsInDB (): void
+    private function checkIfEmailExistsInDB(): void
     {
         foreach ($this->sheetData as $key => $row) {
             if ($key === 1) {
                 continue;
             }
             $email = $row['C'];
-            if (User::model()->findByAttributes(['email' => $email])) {
+            if (UserService::checkIfEmailExistsInDB($email)) {
                 throw new Exception(sprintf('User with email "%s" exists.', $email));
             }
         }
