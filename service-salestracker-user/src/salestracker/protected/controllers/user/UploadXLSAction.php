@@ -51,16 +51,7 @@ class UploadXLSAction extends CAction
             }
             $email = $row['C'];
             $generatedPassword = substr(md5(mt_rand()), 0, 7);
-            $userService = new UserService(
-                $row['A'],
-                $row['B'],
-                $email,
-                $row['D'],
-                $generatedPassword,
-                date('Y-m-d'),
-                date('Y-m-d H:i:s')
-            );
-
+            $userService = new UserService($row['A'], $row['B'], $email, $row['D'], $generatedPassword, date('Y-m-d'), date('Y-m-d H:i:s'));
             if ($userService->setUser()->saveUserInDB()) {
                 $emailService = new EmailService(
                     $email,
