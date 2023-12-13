@@ -39,22 +39,22 @@ class User extends CActiveRecord
         return $this->id;
     }
 
-    public function getFirstname(): string
+    public function getFirstname(): ?string
     {
         return $this->firstname;
     }
 
-    public function setFirstname(string $firstname): void
+    public function setFirstname(?string $firstname): void
     {
         $this->firstname = $firstname;
     }
 
-    public function getLastname(): string
+    public function getLastname(): ?string
     {
         return $this->lastname;
     }
 
-    public function setLastname(string $lastname): void
+    public function setLastname(?string $lastname): void
     {
         $this->lastname = $lastname;
     }
@@ -69,12 +69,12 @@ class User extends CActiveRecord
         $this->email = $email;
     }
 
-    public function getBirth(): string
+    public function getBirth(): ?string
     {
         return $this->birth;
     }
 
-    public function setBirth(string $birth): void
+    public function setBirth(?string $birth): void
     {
         $this->birth = $birth;
     }

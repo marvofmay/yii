@@ -5,10 +5,10 @@ class UserService
     private User $user;
 
     public function __construct (
-        private readonly string $firstname,
-        private readonly string $lastname,
+        private readonly ?string $firstname,
+        private readonly ?string $lastname,
         private readonly string $email,
-        private readonly string $birth,
+        private readonly ?string $birth,
         private readonly string $password,
         private readonly string $datePassword,
         private readonly ?string $created = null,
