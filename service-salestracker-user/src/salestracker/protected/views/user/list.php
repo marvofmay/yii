@@ -1,6 +1,6 @@
 <?php
     $this->pageTitle=Yii::app()->name . ' - List Users';
-    $this->breadcrumbs=['List Users',];
+    $this->breadcrumbs=['List users',];
 ?>
 
 <div id="content">

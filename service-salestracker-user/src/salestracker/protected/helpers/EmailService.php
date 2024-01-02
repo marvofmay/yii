@@ -1,5 +1,4 @@
 <?php
-
 class EmailService
 {
     public function __construct (

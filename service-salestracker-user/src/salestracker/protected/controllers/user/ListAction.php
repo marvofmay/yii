@@ -4,6 +4,8 @@ class ListAction extends CAction
 {
     public function run(): void
     {
+        $users = [];
+
         try {
             $users = User::model()->findAll();
         } catch (Exception $exception) {

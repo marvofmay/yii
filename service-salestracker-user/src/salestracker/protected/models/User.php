@@ -34,6 +34,14 @@ class User extends CActiveRecord
 		];
 	}
 
+    public function relations()
+    {
+        return [
+            'posts' => [self::HAS_MANY, 'Post', 'user_id'],
+            'profile'=> [self::HAS_ONE, 'Profile', 'user_id'],
+        ];
+    }
+
     public function getId(): int
     {
         return $this->id;

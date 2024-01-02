@@ -3,7 +3,6 @@
 class UserService
 {
     private User $user;
-
     public function __construct (
         private readonly ?string $firstname,
         private readonly ?string $lastname,

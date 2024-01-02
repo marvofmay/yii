@@ -74,7 +74,8 @@
 	},
 	"require": {
 		"php": ">=5.1.0",
-		"phpoffice/phpspreadsheet": "^1.29"
+		"phpoffice/phpspreadsheet": "^1.29",
+		"tebazil/yii1-db-seeder": "^0.0.0"
 	},
 	"suggest": {
 		"ext-mcrypt": "Required by encrypt and decrypt methods of CSecurityManager",

@@ -36,6 +36,7 @@
                 array('label'=>'Register', 'url'=>array('/user/register'), 'visible' => Yii::app()->user->isGuest),
 				array('label'=>'Logout (' . Yii::app()->user->name . ')', 'url'=>array('/user/logout'), 'visible' => ! Yii::app()->user->isGuest),
                 array('label'=>'Users', 'url'=>array('/user/list'), 'visible' => ! Yii::app()->user->isGuest),
+                array('label'=>'Categories', 'url'=>array('/category/list'), 'visible' => ! Yii::app()->user->isGuest),
                 array('label'=>'Upload XLS', 'url'=>array('/user/uploadXLS'), 'visible' => ! Yii::app()->user->isGuest),
                 array('label'=>'Change password', 'url'=>array('/user/changePassword'), 'visible' => ! Yii::app()->user->isGuest),
 			),

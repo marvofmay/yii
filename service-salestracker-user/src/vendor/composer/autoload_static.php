@@ -14,6 +14,11 @@ class ComposerStaticInita4fb1d423807a1562ccfc4b9d16c94e3
     );
 
     public static $prefixLengthsPsr4 = array (
+        't' => 
+        array (
+            'tebazil\\yii1seeder\\' => 19,
+            'tebazil\\dbseeder\\' => 17,
+        ),
         'p' => 
         array (
             'phpseclib\\' => 10,
@@ -42,6 +47,10 @@ class ComposerStaticInita4fb1d423807a1562ccfc4b9d16c94e3
         array (
             'Matrix\\' => 7,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -53,6 +62,14 @@ class ComposerStaticInita4fb1d423807a1562ccfc4b9d16c94e3
     );
 
     public static $prefixDirsPsr4 = array (
+        'tebazil\\yii1seeder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tebazil/yii1-db-seeder/src',
+        ),
+        'tebazil\\dbseeder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tebazil/db-seeder/src',
+        ),
         'phpseclib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
@@ -79,8 +96,8 @@ class ComposerStaticInita4fb1d423807a1562ccfc4b9d16c94e3
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -93,6 +110,10 @@ class ComposerStaticInita4fb1d423807a1562ccfc4b9d16c94e3
         'Matrix\\' => 
         array (
             0 => __DIR__ . '/..' . '/markbaker/matrix/classes/src',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
